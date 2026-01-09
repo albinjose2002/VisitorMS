@@ -2,7 +2,7 @@
    App Shell + Navigation
 ------------------------ */
 const APP = {
-  company: "ACME Company",
+  company: "Brahmins Company",
   user: { name: "Security-01", role: "Security", shift: "Shift A" },
   gates: {
     entry: { id: "GATE_ENTRY", name: "Gate 1 - Entry" },
@@ -727,6 +727,12 @@ document.addEventListener("DOMContentLoaded", () => {
     document
       .getElementById("btnIssuePass")
       ?.addEventListener("click", issuePassFromForm);
+    // document.getElementById("btnWhatsapp")?.addEventListener("click", () => {
+    //   alert("Mock: QR Pass sent via WhatsApp!");
+    // });
+    // document.getElementById("btnPrintPass")?.addEventListener("click", () => {
+    //   alert("Mock: Printing Pass...");
+    // });
   }
   if (page === "visitors") {
     renderVisitors();
