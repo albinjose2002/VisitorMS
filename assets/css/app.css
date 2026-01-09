@@ -1,0 +1,221 @@
+:root{
+  --bg:#0b1220;
+  --panel:rgba(255,255,255,.06);
+  --panel2:rgba(255,255,255,.09);
+  --border:rgba(255,255,255,.10);
+  --text:rgba(255,255,255,.92);
+  --muted:rgba(255,255,255,.65);
+  --accent:#7c5cff;
+  --good:#2dd4bf;
+  --warn:#fbbf24;
+  --bad:#fb7185;
+}
+
+body{
+  background:
+    radial-gradient(1200px 600px at 20% -10%, rgba(124,92,255,.35), transparent 60%),
+    radial-gradient(900px 500px at 90% 0%, rgba(45,212,191,.25), transparent 55%),
+    var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+a { text-decoration: none; }
+.glass{
+  background: var(--panel);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+}
+.glass2{
+  background: var(--panel2);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+}
+
+.app-shell{ min-height: 100vh; }
+.sidebar{
+  width: 290px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 18px;
+}
+.brand{ display:flex; align-items:center; gap:10px; padding: 12px; }
+.brand .logo{
+  width: 38px; height: 38px; border-radius: 12px;
+  background: linear-gradient(135deg, rgba(124,92,255,.95), rgba(45,212,191,.85));
+  display:grid; place-items:center;
+  box-shadow: 0 12px 25px rgba(124,92,255,.25);
+}
+.brand .logo i{ font-size: 20px; color:#06101f; }
+
+.nav-link{
+  color: var(--muted);
+  border-radius: 12px;
+  padding: 10px 12px;
+  display:flex; align-items:center; gap:10px;
+}
+.nav-link:hover{ color: var(--text); background: rgba(255,255,255,.06); }
+.nav-link.active{
+  color: var(--text);
+  background: linear-gradient(135deg, rgba(124,92,255,.22), rgba(45,212,191,.10));
+  border: 1px solid rgba(124,92,255,.25);
+}
+
+.topbar{ padding: 18px 18px 0 18px; }
+.content{ padding: 18px; }
+
+.pill{
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.05);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 6px 10px;
+  display:inline-flex; align-items:center; gap:8px;
+  font-size: .86rem;
+}
+.muted{ color: var(--muted); }
+
+.kpi{
+  padding: 14px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.05);
+}
+.kpi .val{ font-size: 1.6rem; font-weight: 800; letter-spacing: .2px; }
+.kpi .lbl{ color: var(--muted); font-size: .9rem; }
+
+.table thead th{
+  color: rgba(255,255,255,.75);
+  border-color: rgba(255,255,255,.10) !important;
+}
+.table td{
+  color: rgba(255,255,255,.88);
+  border-color: rgba(255,255,255,.08) !important;
+  vertical-align: middle;
+}
+
+.badge-soft{
+  border: 1px solid rgba(255,255,255,.16);
+  background: rgba(255,255,255,.06);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-weight: 700;
+}
+.badge-good{ border-color: rgba(45,212,191,.35); background: rgba(45,212,191,.10); }
+.badge-warn{ border-color: rgba(251,191,36,.35); background: rgba(251,191,36,.10); }
+.badge-bad{  border-color: rgba(251,113,133,.35); background: rgba(251,113,133,.10); }
+
+.btn-accent{
+  background: linear-gradient(135deg, rgba(124,92,255,.95), rgba(45,212,191,.85));
+  border: none;
+  color: #071022;
+  font-weight: 900;
+}
+.btn-accent:hover{ opacity:.95; color:#071022; }
+
+.form-control, .form-select{
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.12);
+  color: rgba(255,255,255,.9);
+  border-radius: 12px;
+}
+.form-control:focus, .form-select:focus{
+  border-color: rgba(124,92,255,.55);
+  box-shadow: 0 0 0 .25rem rgba(124,92,255,.15);
+  background: rgba(255,255,255,.06);
+  color: rgba(255,255,255,.92);
+}
+
+.hr-soft{ border-color: rgba(255,255,255,.10); }
+
+.qr-box{
+  width: 160px; height: 160px;
+  border-radius: 16px;
+  border: 1px dashed rgba(255,255,255,.22);
+  display:grid; place-items:center;
+  background: rgba(255,255,255,.04);
+}
+
+.small-note{ font-size: .86rem; color: rgba(255,255,255,.65); }
+
+
+/* ===============================
+   FIX: Dropdown & Select Popups
+   =============================== */
+
+/* Dropdown menu background */
+.dropdown-menu {
+  background: #0f172a;                 /* dark slate */
+  border: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(10px);
+}
+
+/* Dropdown items */
+.dropdown-item {
+  color: rgba(255,255,255,.9);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background: rgba(124,92,255,.25);
+  color: #fff;
+}
+
+/* Bootstrap <select> option popup (Chrome/Edge) */
+select option {
+  background-color: #0f172a;
+  color: #ffffff;
+}
+
+/* Disabled / muted options */
+select option:disabled {
+  color: rgba(255,255,255,.4);
+}
+
+/* Fix for Safari / Firefox */
+select {
+  color-scheme: dark;
+}
+
+
+
+/* ===============================
+   FIX: Logs Table White Background
+   =============================== */
+
+/* Override Bootstrap table background */
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-striped-bg: rgba(255,255,255,.04);
+  --bs-table-hover-bg: rgba(124,92,255,.08);
+  color: rgba(255,255,255,.9);
+}
+
+/* Table container glass effect */
+.table-responsive {
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 14px;
+  padding: 8px;
+}
+
+/* Header row */
+.table thead th {
+  background: rgba(255,255,255,.06);
+  color: rgba(255,255,255,.75);
+}
+
+/* Body rows */
+.table tbody tr {
+  background: transparent;
+}
+
+/* Empty state row */
+.table td.muted {
+  color: rgba(255,255,255,.55);
+}
+
